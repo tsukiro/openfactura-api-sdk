@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTERequest Class Doc Comment
@@ -56,8 +56,8 @@ class DTERequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\DTEResponseItem[]',
-'dte' => '\Swagger\Client\Model\DTERequestDte'    ];
+        'response' => '\Tsukiro\Client\Model\DTEResponseItem[]',
+'dte' => '\Tsukiro\Client\Model\DTERequestDte'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class DTERequest implements ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Swagger\Client\Model\DTEResponseItem[]
+     * @return \Tsukiro\Client\Model\DTEResponseItem[]
      */
     public function getResponse()
     {
@@ -215,7 +215,7 @@ class DTERequest implements ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Swagger\Client\Model\DTEResponseItem[] $response response
+     * @param \Tsukiro\Client\Model\DTEResponseItem[] $response response
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class DTERequest implements ModelInterface, ArrayAccess
     /**
      * Gets dte
      *
-     * @return \Swagger\Client\Model\DTERequestDte
+     * @return \Tsukiro\Client\Model\DTERequestDte
      */
     public function getDte()
     {
@@ -239,7 +239,7 @@ class DTERequest implements ModelInterface, ArrayAccess
     /**
      * Sets dte
      *
-     * @param \Swagger\Client\Model\DTERequestDte $dte dte
+     * @param \Tsukiro\Client\Model\DTERequestDte $dte dte
      *
      * @return $this
      */

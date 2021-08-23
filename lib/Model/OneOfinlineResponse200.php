@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * OneOfinlineResponse200 Class Doc Comment

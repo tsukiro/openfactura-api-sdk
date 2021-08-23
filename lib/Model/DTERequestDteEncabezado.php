@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTERequestDteEncabezado Class Doc Comment
@@ -56,10 +56,10 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id_doc' => '\Swagger\Client\Model\DTEIdDoc',
-'emisor' => '\Swagger\Client\Model\DTEEmisor',
-'receptor' => '\Swagger\Client\Model\DTEReceptor',
-'totales' => '\Swagger\Client\Model\DTETotales'    ];
+        'id_doc' => '\Tsukiro\Client\Model\DTEIdDoc',
+'emisor' => '\Tsukiro\Client\Model\DTEEmisor',
+'receptor' => '\Tsukiro\Client\Model\DTEReceptor',
+'totales' => '\Tsukiro\Client\Model\DTETotales'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -217,7 +217,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Gets id_doc
      *
-     * @return \Swagger\Client\Model\DTEIdDoc
+     * @return \Tsukiro\Client\Model\DTEIdDoc
      */
     public function getIdDoc()
     {
@@ -227,7 +227,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Sets id_doc
      *
-     * @param \Swagger\Client\Model\DTEIdDoc $id_doc id_doc
+     * @param \Tsukiro\Client\Model\DTEIdDoc $id_doc id_doc
      *
      * @return $this
      */
@@ -241,7 +241,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Gets emisor
      *
-     * @return \Swagger\Client\Model\DTEEmisor
+     * @return \Tsukiro\Client\Model\DTEEmisor
      */
     public function getEmisor()
     {
@@ -251,7 +251,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Sets emisor
      *
-     * @param \Swagger\Client\Model\DTEEmisor $emisor emisor
+     * @param \Tsukiro\Client\Model\DTEEmisor $emisor emisor
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Gets receptor
      *
-     * @return \Swagger\Client\Model\DTEReceptor
+     * @return \Tsukiro\Client\Model\DTEReceptor
      */
     public function getReceptor()
     {
@@ -275,7 +275,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Sets receptor
      *
-     * @param \Swagger\Client\Model\DTEReceptor $receptor receptor
+     * @param \Tsukiro\Client\Model\DTEReceptor $receptor receptor
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Gets totales
      *
-     * @return \Swagger\Client\Model\DTETotales
+     * @return \Tsukiro\Client\Model\DTETotales
      */
     public function getTotales()
     {
@@ -299,7 +299,7 @@ class DTERequestDteEncabezado implements ModelInterface, ArrayAccess
     /**
      * Sets totales
      *
-     * @param \Swagger\Client\Model\DTETotales $totales totales
+     * @param \Tsukiro\Client\Model\DTETotales $totales totales
      *
      * @return $this
      */

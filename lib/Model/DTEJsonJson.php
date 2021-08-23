@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTEJsonJson Class Doc Comment
@@ -56,8 +56,8 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'detalle' => '\Swagger\Client\Model\DTEDetail',
-'encabezado' => '\Swagger\Client\Model\DTEJsonJsonEncabezado'    ];
+        'detalle' => '\Tsukiro\Client\Model\DTEDetail',
+'encabezado' => '\Tsukiro\Client\Model\DTEJsonJsonEncabezado'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
     /**
      * Gets detalle
      *
-     * @return \Swagger\Client\Model\DTEDetail
+     * @return \Tsukiro\Client\Model\DTEDetail
      */
     public function getDetalle()
     {
@@ -215,7 +215,7 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
     /**
      * Sets detalle
      *
-     * @param \Swagger\Client\Model\DTEDetail $detalle detalle
+     * @param \Tsukiro\Client\Model\DTEDetail $detalle detalle
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
     /**
      * Gets encabezado
      *
-     * @return \Swagger\Client\Model\DTEJsonJsonEncabezado
+     * @return \Tsukiro\Client\Model\DTEJsonJsonEncabezado
      */
     public function getEncabezado()
     {
@@ -239,7 +239,7 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
     /**
      * Sets encabezado
      *
-     * @param \Swagger\Client\Model\DTEJsonJsonEncabezado $encabezado encabezado
+     * @param \Tsukiro\Client\Model\DTEJsonJsonEncabezado $encabezado encabezado
      *
      * @return $this
      */

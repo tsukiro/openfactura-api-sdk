@@ -56,12 +56,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\DTERequest(); // \Swagger\Client\Model\DTERequest | 
+$body = new \Tsukiro\Client\Model\DTERequest(); // \Tsukiro\Client\Model\DTERequest | 
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
@@ -71,12 +71,12 @@ try {
     echo 'Exception when calling DefaultApi->v2DteDocumentPost: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\DocumentReceivedFilter(); // \Swagger\Client\Model\DocumentReceivedFilter | 
+$body = new \Tsukiro\Client\Model\DocumentReceivedFilter(); // \Tsukiro\Client\Model\DocumentReceivedFilter | 
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
@@ -86,7 +86,7 @@ try {
     echo 'Exception when calling DefaultApi->v2DteDocumentReceivedPost: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

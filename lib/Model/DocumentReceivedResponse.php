@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DocumentReceivedResponse Class Doc Comment
@@ -58,7 +58,7 @@ class DocumentReceivedResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'current_page' => 'int',
 'last_page' => 'int',
-'data' => '\Swagger\Client\Model\DocumentReceivedItems[]',
+'data' => '\Tsukiro\Client\Model\DocumentReceivedItems[]',
 'total' => 'int'    ];
 
     /**
@@ -265,7 +265,7 @@ class DocumentReceivedResponse implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\DocumentReceivedItems[]
+     * @return \Tsukiro\Client\Model\DocumentReceivedItems[]
      */
     public function getData()
     {
@@ -275,7 +275,7 @@ class DocumentReceivedResponse implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\DocumentReceivedItems[] $data data
+     * @param \Tsukiro\Client\Model\DocumentReceivedItems[] $data data
      *
      * @return $this
      */

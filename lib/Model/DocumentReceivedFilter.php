@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DocumentReceivedFilter Class Doc Comment
@@ -57,9 +57,9 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'page' => 'string',
-'tipo_dte' => '\Swagger\Client\Model\DTEFilter',
-'fch_emis' => '\Swagger\Client\Model\DTEFilter',
-'rut_emisor' => '\Swagger\Client\Model\DTEFilter'    ];
+'tipo_dte' => '\Tsukiro\Client\Model\DTEFilter',
+'fch_emis' => '\Tsukiro\Client\Model\DTEFilter',
+'rut_emisor' => '\Tsukiro\Client\Model\DTEFilter'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -241,7 +241,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Gets tipo_dte
      *
-     * @return \Swagger\Client\Model\DTEFilter
+     * @return \Tsukiro\Client\Model\DTEFilter
      */
     public function getTipoDte()
     {
@@ -251,7 +251,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Sets tipo_dte
      *
-     * @param \Swagger\Client\Model\DTEFilter $tipo_dte tipo_dte
+     * @param \Tsukiro\Client\Model\DTEFilter $tipo_dte tipo_dte
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Gets fch_emis
      *
-     * @return \Swagger\Client\Model\DTEFilter
+     * @return \Tsukiro\Client\Model\DTEFilter
      */
     public function getFchEmis()
     {
@@ -275,7 +275,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Sets fch_emis
      *
-     * @param \Swagger\Client\Model\DTEFilter $fch_emis fch_emis
+     * @param \Tsukiro\Client\Model\DTEFilter $fch_emis fch_emis
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Gets rut_emisor
      *
-     * @return \Swagger\Client\Model\DTEFilter
+     * @return \Tsukiro\Client\Model\DTEFilter
      */
     public function getRutEmisor()
     {
@@ -299,7 +299,7 @@ class DocumentReceivedFilter implements ModelInterface, ArrayAccess
     /**
      * Sets rut_emisor
      *
-     * @param \Swagger\Client\Model\DTEFilter $rut_emisor rut_emisor
+     * @param \Tsukiro\Client\Model\DTEFilter $rut_emisor rut_emisor
      *
      * @return $this
      */

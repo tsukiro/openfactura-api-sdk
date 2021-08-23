@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTERequestDte Class Doc Comment
@@ -56,8 +56,8 @@ class DTERequestDte implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'encabezado' => '\Swagger\Client\Model\DTERequestDteEncabezado',
-'detalle' => '\Swagger\Client\Model\DTEDetail[]'    ];
+        'encabezado' => '\Tsukiro\Client\Model\DTERequestDteEncabezado',
+'detalle' => '\Tsukiro\Client\Model\DTEDetail[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class DTERequestDte implements ModelInterface, ArrayAccess
     /**
      * Gets encabezado
      *
-     * @return \Swagger\Client\Model\DTERequestDteEncabezado
+     * @return \Tsukiro\Client\Model\DTERequestDteEncabezado
      */
     public function getEncabezado()
     {
@@ -215,7 +215,7 @@ class DTERequestDte implements ModelInterface, ArrayAccess
     /**
      * Sets encabezado
      *
-     * @param \Swagger\Client\Model\DTERequestDteEncabezado $encabezado encabezado
+     * @param \Tsukiro\Client\Model\DTERequestDteEncabezado $encabezado encabezado
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class DTERequestDte implements ModelInterface, ArrayAccess
     /**
      * Gets detalle
      *
-     * @return \Swagger\Client\Model\DTEDetail[]
+     * @return \Tsukiro\Client\Model\DTEDetail[]
      */
     public function getDetalle()
     {
@@ -239,7 +239,7 @@ class DTERequestDte implements ModelInterface, ArrayAccess
     /**
      * Sets detalle
      *
-     * @param \Swagger\Client\Model\DTEDetail[] $detalle detalle
+     * @param \Tsukiro\Client\Model\DTEDetail[] $detalle detalle
      *
      * @return $this
      */

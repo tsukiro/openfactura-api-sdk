@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTEResponse Class Doc Comment
@@ -59,7 +59,7 @@ class DTEResponse implements ModelInterface, ArrayAccess
         'token' => 'string',
 'folio' => 'int',
 'pdf' => 'string',
-'resolucion' => '\Swagger\Client\Model\DTEResponseRESOLUCION',
+'resolucion' => '\Tsukiro\Client\Model\DTEResponseRESOLUCION',
 'timbre' => 'string',
 'xml' => 'string',
 'logo' => 'string'    ];
@@ -307,7 +307,7 @@ class DTEResponse implements ModelInterface, ArrayAccess
     /**
      * Gets resolucion
      *
-     * @return \Swagger\Client\Model\DTEResponseRESOLUCION
+     * @return \Tsukiro\Client\Model\DTEResponseRESOLUCION
      */
     public function getResolucion()
     {
@@ -317,7 +317,7 @@ class DTEResponse implements ModelInterface, ArrayAccess
     /**
      * Sets resolucion
      *
-     * @param \Swagger\Client\Model\DTEResponseRESOLUCION $resolucion resolucion
+     * @param \Tsukiro\Client\Model\DTEResponseRESOLUCION $resolucion resolucion
      *
      * @return $this
      */

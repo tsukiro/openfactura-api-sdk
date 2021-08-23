@@ -26,8 +26,8 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
-use \Swagger\Client\ObjectSerializer;
+namespace Tsukiro\Client\Model;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTEResponseItem Class Doc Comment

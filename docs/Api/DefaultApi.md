@@ -1,4 +1,4 @@
-# Swagger\Client\DefaultApi
+# Tsukiro\Client\DefaultApi
 
 All URIs are relative to *https://dev-api.haulmer.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**v2DteDocumentRutTypeDocumentNumberValueGet**](DefaultApi.md#v2dtedocumentruttypedocumentnumbervalueget) | **GET** /v2/dte/document/{rut}/{type}/{documentNumber}/{value} | Entrega la información de un documento emitido o recibido en Openfactura.
 
 # **v2DteDocumentPost**
-> \Swagger\Client\Model\DTEResponse v2DteDocumentPost($body, $apikey)
+> \Tsukiro\Client\Model\DTEResponse v2DteDocumentPost($body, $apikey)
 
 Realiza la emisión de documentos DTE
 
@@ -20,12 +20,12 @@ Emisión de DTE
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\DTERequest(); // \Swagger\Client\Model\DTERequest | 
+$body = new \Tsukiro\Client\Model\DTERequest(); // \Tsukiro\Client\Model\DTERequest | 
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
@@ -41,12 +41,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DTERequest**](../Model/DTERequest.md)|  | [optional]
+ **body** | [**\Tsukiro\Client\Model\DTERequest**](../Model/DTERequest.md)|  | [optional]
  **apikey** | **string**| openfactura apikey | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DTEResponse**](../Model/DTEResponse.md)
+[**\Tsukiro\Client\Model\DTEResponse**](../Model/DTEResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v2DteDocumentReceivedPost**
-> \Swagger\Client\Model\DocumentReceivedResponse v2DteDocumentReceivedPost($body, $apikey)
+> \Tsukiro\Client\Model\DocumentReceivedResponse v2DteDocumentReceivedPost($body, $apikey)
 
 
 
@@ -69,12 +69,12 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\DocumentReceivedFilter(); // \Swagger\Client\Model\DocumentReceivedFilter | 
+$body = new \Tsukiro\Client\Model\DocumentReceivedFilter(); // \Tsukiro\Client\Model\DocumentReceivedFilter | 
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
@@ -90,12 +90,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DocumentReceivedFilter**](../Model/DocumentReceivedFilter.md)|  | [optional]
+ **body** | [**\Tsukiro\Client\Model\DocumentReceivedFilter**](../Model/DocumentReceivedFilter.md)|  | [optional]
  **apikey** | **string**| openfactura apikey | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DocumentReceivedResponse**](../Model/DocumentReceivedResponse.md)
+[**\Tsukiro\Client\Model\DocumentReceivedResponse**](../Model/DocumentReceivedResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v2DteDocumentRutTypeDocumentNumberValueGet**
-> \Swagger\Client\Model\InlineResponse200 v2DteDocumentRutTypeDocumentNumberValueGet($rut, $type, $document_number, $value, $apikey)
+> \Tsukiro\Client\Model\InlineResponse200 v2DteDocumentRutTypeDocumentNumberValueGet($rut, $type, $document_number, $value, $apikey)
 
 Entrega la información de un documento emitido o recibido en Openfactura.
 
@@ -118,7 +118,7 @@ Entrega la información de un documento emitido o recibido en Openfactura.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Tsukiro\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

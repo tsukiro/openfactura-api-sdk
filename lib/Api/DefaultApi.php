@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Tsukiro\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,10 +33,10 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Tsukiro\Client\ApiException;
+use Tsukiro\Client\Configuration;
+use Tsukiro\Client\HeaderSelector;
+use Tsukiro\Client\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
@@ -46,7 +46,7 @@ use Swagger\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DefaultApi
+class OpenFacturaApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentPost
+     * Operation DocumentEmit
      *
      * Realiza la emisión de documentos DTE
      *
-     * @param  \Swagger\Client\Model\DTERequest $body body (optional)
+     * @param  \Tsukiro\Client\Model\DTERequest $body body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DTEResponse
+     * @return \Tsukiro\Client\Model\DTEResponse
      */
-    public function v2DteDocumentPost($body = null, $apikey = null)
+    public function DocumentEmit($body = null, $apikey = null)
     {
-        list($response) = $this->v2DteDocumentPostWithHttpInfo($body, $apikey);
+        list($response) = $this->DocumentEmitWithHttpInfo($body, $apikey);
         return $response;
     }
 
     /**
-     * Operation v2DteDocumentPostWithHttpInfo
+     * Operation DocumentEmitWithHttpInfo
      *
      * Realiza la emisión de documentos DTE
      *
-     * @param  \Swagger\Client\Model\DTERequest $body (optional)
+     * @param  \Tsukiro\Client\Model\DTERequest $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DTEResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tsukiro\Client\Model\DTEResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v2DteDocumentPostWithHttpInfo($body = null, $apikey = null)
+    public function DocumentEmitWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DTEResponse';
-        $request = $this->v2DteDocumentPostRequest($body, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DTEResponse';
+        $request = $this->DocumentEmitRequest($body, $apikey);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +170,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DTEResponse',
+                        '\Tsukiro\Client\Model\DTEResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +181,19 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentPostAsync
+     * Operation DocumentEmitAsync
      *
      * Realiza la emisión de documentos DTE
      *
-     * @param  \Swagger\Client\Model\DTERequest $body (optional)
+     * @param  \Tsukiro\Client\Model\DTERequest $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentPostAsync($body = null, $apikey = null)
+    public function DocumentEmitAsync($body = null, $apikey = null)
     {
-        return $this->v2DteDocumentPostAsyncWithHttpInfo($body, $apikey)
+        return $this->DocumentEmitAsyncWithHttpInfo($body, $apikey)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +202,20 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentPostAsyncWithHttpInfo
+     * Operation DocumentEmitAsyncWithHttpInfo
      *
      * Realiza la emisión de documentos DTE
      *
-     * @param  \Swagger\Client\Model\DTERequest $body (optional)
+     * @param  \Tsukiro\Client\Model\DTERequest $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentPostAsyncWithHttpInfo($body = null, $apikey = null)
+    public function DocumentEmitAsyncWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DTEResponse';
-        $request = $this->v2DteDocumentPostRequest($body, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DTEResponse';
+        $request = $this->DocumentEmitRequest($body, $apikey);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,15 +255,15 @@ class DefaultApi
     }
 
     /**
-     * Create request for operation 'v2DteDocumentPost'
+     * Create request for operation 'DocumentEmit'
      *
-     * @param  \Swagger\Client\Model\DTERequest $body (optional)
+     * @param  \Tsukiro\Client\Model\DTERequest $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function v2DteDocumentPostRequest($body = null, $apikey = null)
+    protected function DocumentEmitRequest($body = null, $apikey = null)
     {
 
         $resourcePath = '/v2/dte/document';
@@ -347,35 +347,35 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentReceivedPost
+     * Operation getReceivedDTE
      *
-     * @param  \Swagger\Client\Model\DocumentReceivedFilter $body body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentReceivedFilter $body body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DocumentReceivedResponse
+     * @return \Tsukiro\Client\Model\DocumentReceivedResponse
      */
-    public function v2DteDocumentReceivedPost($body = null, $apikey = null)
+    public function getReceivedDTE($body = null, $apikey = null)
     {
-        list($response) = $this->v2DteDocumentReceivedPostWithHttpInfo($body, $apikey);
+        list($response) = $this->getReceivedDTEWithHttpInfo($body, $apikey);
         return $response;
     }
 
     /**
-     * Operation v2DteDocumentReceivedPostWithHttpInfo
+     * Operation getReceivedDTEWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\DocumentReceivedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentReceivedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DocumentReceivedResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tsukiro\Client\Model\DocumentReceivedResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v2DteDocumentReceivedPostWithHttpInfo($body = null, $apikey = null)
+    public function getReceivedDTEWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DocumentReceivedResponse';
-        $request = $this->v2DteDocumentReceivedPostRequest($body, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DocumentReceivedResponse';
+        $request = $this->getReceivedDTERequest($body, $apikey);
 
         try {
             $options = $this->createHttpClientOption();
@@ -426,7 +426,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DocumentReceivedResponse',
+                        '\Tsukiro\Client\Model\DocumentReceivedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -437,19 +437,19 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentReceivedPostAsync
+     * Operation getReceivedDTEAsync
      *
      * 
      *
-     * @param  \Swagger\Client\Model\DocumentReceivedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentReceivedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentReceivedPostAsync($body = null, $apikey = null)
+    public function getReceivedDTEAsync($body = null, $apikey = null)
     {
-        return $this->v2DteDocumentReceivedPostAsyncWithHttpInfo($body, $apikey)
+        return $this->getReceivedDTEAsyncWithHttpInfo($body, $apikey)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -458,20 +458,20 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentReceivedPostAsyncWithHttpInfo
+     * Operation getReceivedDTEAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Swagger\Client\Model\DocumentReceivedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentReceivedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentReceivedPostAsyncWithHttpInfo($body = null, $apikey = null)
+    public function getReceivedDTEAsyncWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DocumentReceivedResponse';
-        $request = $this->v2DteDocumentReceivedPostRequest($body, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DocumentReceivedResponse';
+        $request = $this->getReceivedDTERequest($body, $apikey);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -511,15 +511,15 @@ class DefaultApi
     }
 
     /**
-     * Create request for operation 'v2DteDocumentReceivedPost'
+     * Create request for operation 'getReceivedDTE'
      *
-     * @param  \Swagger\Client\Model\DocumentReceivedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentReceivedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function v2DteDocumentReceivedPostRequest($body = null, $apikey = null)
+    protected function getReceivedDTERequest($body = null, $apikey = null)
     {
 
         $resourcePath = '/v2/dte/document/received';
@@ -603,7 +603,7 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentRutTypeDocumentNumberValueGet
+     * Operation getDTEDocument
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -613,18 +613,18 @@ class DefaultApi
      * @param  string $value value (required)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Tsukiro\Client\Model\InlineResponse200
      */
-    public function v2DteDocumentRutTypeDocumentNumberValueGet($rut, $type, $document_number, $value, $apikey = null)
+    public function getDTEDocument($rut, $type, $document_number, $value, $apikey = null)
     {
-        list($response) = $this->v2DteDocumentRutTypeDocumentNumberValueGetWithHttpInfo($rut, $type, $document_number, $value, $apikey);
+        list($response) = $this->getDTEDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey);
         return $response;
     }
 
     /**
-     * Operation v2DteDocumentRutTypeDocumentNumberValueGetWithHttpInfo
+     * Operation getDTEDocumentWithHttpInfo
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -634,14 +634,14 @@ class DefaultApi
      * @param  string $value (required)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tsukiro\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v2DteDocumentRutTypeDocumentNumberValueGetWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
+    public function getDTEDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
-        $request = $this->v2DteDocumentRutTypeDocumentNumberValueGetRequest($rut, $type, $document_number, $value, $apikey);
+        $returnType = '\Tsukiro\Client\Model\InlineResponse200';
+        $request = $this->getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey);
 
         try {
             $options = $this->createHttpClientOption();
@@ -692,7 +692,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Tsukiro\Client\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -703,7 +703,7 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentRutTypeDocumentNumberValueGetAsync
+     * Operation getDTEDocumentAsync
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -716,9 +716,9 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentRutTypeDocumentNumberValueGetAsync($rut, $type, $document_number, $value, $apikey = null)
+    public function getDTEDocumentAsync($rut, $type, $document_number, $value, $apikey = null)
     {
-        return $this->v2DteDocumentRutTypeDocumentNumberValueGetAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey)
+        return $this->getDTEDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -727,7 +727,7 @@ class DefaultApi
     }
 
     /**
-     * Operation v2DteDocumentRutTypeDocumentNumberValueGetAsyncWithHttpInfo
+     * Operation getDTEDocumentAsyncWithHttpInfo
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -740,10 +740,10 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v2DteDocumentRutTypeDocumentNumberValueGetAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
+    public function getDTEDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
-        $request = $this->v2DteDocumentRutTypeDocumentNumberValueGetRequest($rut, $type, $document_number, $value, $apikey);
+        $returnType = '\Tsukiro\Client\Model\InlineResponse200';
+        $request = $this->getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -783,7 +783,7 @@ class DefaultApi
     }
 
     /**
-     * Create request for operation 'v2DteDocumentRutTypeDocumentNumberValueGet'
+     * Create request for operation 'getDTEDocument'
      *
      * @param  string $rut (required)
      * @param  string $type (required)
@@ -794,30 +794,30 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function v2DteDocumentRutTypeDocumentNumberValueGetRequest($rut, $type, $document_number, $value, $apikey = null)
+    protected function getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey = null)
     {
         // verify the required parameter 'rut' is set
         if ($rut === null || (is_array($rut) && count($rut) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $rut when calling v2DteDocumentRutTypeDocumentNumberValueGet'
+                'Missing the required parameter $rut when calling getDTEDocument'
             );
         }
         // verify the required parameter 'type' is set
         if ($type === null || (is_array($type) && count($type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling v2DteDocumentRutTypeDocumentNumberValueGet'
+                'Missing the required parameter $type when calling getDTEDocument'
             );
         }
         // verify the required parameter 'document_number' is set
         if ($document_number === null || (is_array($document_number) && count($document_number) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $document_number when calling v2DteDocumentRutTypeDocumentNumberValueGet'
+                'Missing the required parameter $document_number when calling getDTEDocument'
             );
         }
         // verify the required parameter 'value' is set
         if ($value === null || (is_array($value) && count($value) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $value when calling v2DteDocumentRutTypeDocumentNumberValueGet'
+                'Missing the required parameter $value when calling getDTEDocument'
             );
         }
 

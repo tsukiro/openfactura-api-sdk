@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Tsukiro\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Tsukiro\Client\ObjectSerializer;
 
 /**
  * DTEJson Class Doc Comment
@@ -56,7 +56,7 @@ class DTEJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'json' => '\Swagger\Client\Model\DTEJsonJson',
+        'json' => '\Tsukiro\Client\Model\DTEJsonJson',
 'folio' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class DTEJson implements ModelInterface, ArrayAccess
     /**
      * Gets json
      *
-     * @return \Swagger\Client\Model\DTEJsonJson
+     * @return \Tsukiro\Client\Model\DTEJsonJson
      */
     public function getJson()
     {
@@ -215,7 +215,7 @@ class DTEJson implements ModelInterface, ArrayAccess
     /**
      * Sets json
      *
-     * @param \Swagger\Client\Model\DTEJsonJson $json json
+     * @param \Tsukiro\Client\Model\DTEJsonJson $json json
      *
      * @return $this
      */

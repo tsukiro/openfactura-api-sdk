@@ -27,9 +27,9 @@
 
 namespace Swagger\Client;
 
-use Swagger\Client\Configuration;
-use Swagger\Client\ApiException;
-use Swagger\Client\ObjectSerializer;
+use Tsukiro\Client\Configuration;
+use Tsukiro\Client\ApiException;
+use Tsukiro\Client\ObjectSerializer;
 
 /**
  * DefaultApiTest Class Doc Comment
