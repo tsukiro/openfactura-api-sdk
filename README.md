@@ -65,7 +65,7 @@ $body = new \Tsukiro\Client\Model\DTERequest(); // \Tsukiro\Client\Model\DTERequ
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
-    $result = $apiInstance->v2DteDocumentPost($body, $apikey);
+    $result = $apiInstance->DocumentEmit($body, $apikey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->v2DteDocumentPost: ', $e->getMessage(), PHP_EOL;
@@ -80,7 +80,7 @@ $body = new \Tsukiro\Client\Model\DocumentReceivedFilter(); // \Tsukiro\Client\M
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
-    $result = $apiInstance->v2DteDocumentReceivedPost($body, $apikey);
+    $result = $apiInstance->getReceivedDTE($body, $apikey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->v2DteDocumentReceivedPost: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +98,7 @@ $value = "value_example"; // string |
 $apikey = "apikey_example"; // string | openfactura apikey
 
 try {
-    $result = $apiInstance->v2DteDocumentRutTypeDocumentNumberValueGet($rut, $type, $document_number, $value, $apikey);
+    $result = $apiInstance->getDTEDocument($rut, $type, $document_number, $value, $apikey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->v2DteDocumentRutTypeDocumentNumberValueGet: ', $e->getMessage(), PHP_EOL;
