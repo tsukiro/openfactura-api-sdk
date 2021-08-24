@@ -56,7 +56,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-            ];
+        'eq' => 'string',
+'lt' => 'string',
+'gt' => 'string',
+'lte' => 'string',
+'gte' => 'string',
+'ne' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +69,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-            ];
+        'eq' => null,
+'lt' => null,
+'gt' => null,
+'lte' => null,
+'gte' => null,
+'ne' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +103,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-            ];
+        'eq' => 'eq',
+'lt' => 'lt',
+'gt' => 'gt',
+'lte' => 'lte',
+'gte' => 'gte',
+'ne' => 'ne'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +116,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-            ];
+        'eq' => 'setEq',
+'lt' => 'setLt',
+'gt' => 'setGt',
+'lte' => 'setLte',
+'gte' => 'setGte',
+'ne' => 'setNe'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +129,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-            ];
+        'eq' => 'getEq',
+'lt' => 'getLt',
+'gt' => 'getGt',
+'lte' => 'getLte',
+'gte' => 'getGte',
+'ne' => 'getNe'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,6 +194,12 @@ class DTEFilter implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['eq'] = isset($data['eq']) ? $data['eq'] : null;
+        $this->container['lt'] = isset($data['lt']) ? $data['lt'] : null;
+        $this->container['gt'] = isset($data['gt']) ? $data['gt'] : null;
+        $this->container['lte'] = isset($data['lte']) ? $data['lte'] : null;
+        $this->container['gte'] = isset($data['gte']) ? $data['gte'] : null;
+        $this->container['ne'] = isset($data['ne']) ? $data['ne'] : null;
     }
 
     /**
@@ -194,6 +225,150 @@ class DTEFilter implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets eq
+     *
+     * @return string
+     */
+    public function getEq()
+    {
+        return $this->container['eq'];
+    }
+
+    /**
+     * Sets eq
+     *
+     * @param string $eq eq
+     *
+     * @return $this
+     */
+    public function setEq($eq)
+    {
+        $this->container['eq'] = $eq;
+
+        return $this;
+    }
+
+    /**
+     * Gets lt
+     *
+     * @return string
+     */
+    public function getLt()
+    {
+        return $this->container['lt'];
+    }
+
+    /**
+     * Sets lt
+     *
+     * @param string $lt lt
+     *
+     * @return $this
+     */
+    public function setLt($lt)
+    {
+        $this->container['lt'] = $lt;
+
+        return $this;
+    }
+
+    /**
+     * Gets gt
+     *
+     * @return string
+     */
+    public function getGt()
+    {
+        return $this->container['gt'];
+    }
+
+    /**
+     * Sets gt
+     *
+     * @param string $gt gt
+     *
+     * @return $this
+     */
+    public function setGt($gt)
+    {
+        $this->container['gt'] = $gt;
+
+        return $this;
+    }
+
+    /**
+     * Gets lte
+     *
+     * @return string
+     */
+    public function getLte()
+    {
+        return $this->container['lte'];
+    }
+
+    /**
+     * Sets lte
+     *
+     * @param string $lte lte
+     *
+     * @return $this
+     */
+    public function setLte($lte)
+    {
+        $this->container['lte'] = $lte;
+
+        return $this;
+    }
+
+    /**
+     * Gets gte
+     *
+     * @return string
+     */
+    public function getGte()
+    {
+        return $this->container['gte'];
+    }
+
+    /**
+     * Sets gte
+     *
+     * @param string $gte gte
+     *
+     * @return $this
+     */
+    public function setGte($gte)
+    {
+        $this->container['gte'] = $gte;
+
+        return $this;
+    }
+
+    /**
+     * Gets ne
+     *
+     * @return string
+     */
+    public function getNe()
+    {
+        return $this->container['ne'];
+    }
+
+    /**
+     * Sets ne
+     *
+     * @param string $ne ne
+     *
+     * @return $this
+     */
+    public function setNe($ne)
+    {
+        $this->container['ne'] = $ne;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
