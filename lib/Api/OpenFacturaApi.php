@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -42,7 +42,7 @@ use Tsukiro\Client\ObjectSerializer;
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,12 +88,12 @@ class OpenFacturaApi
 /**
      * Operation getIssuedDTE
      *
-     * @param  \Swagger\Client\Model\DocumentIssuedFilter $body body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentIssuedFilter $body body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DocumentIssuedResponse
+     * @return \Tsukiro\Client\Model\DocumentIssuedResponse
      */
     public function getIssuedDTE($body = null, $apikey = null)
     {
@@ -104,16 +104,16 @@ class OpenFacturaApi
     /**
      * Operation getIssuedDTEWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\DocumentIssuedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentIssuedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DocumentIssuedResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tsukiro\Client\Model\DocumentIssuedResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getIssuedDTEWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DocumentIssuedResponse';
+        $returnType = '\Tsukiro\Client\Model\DocumentIssuedResponse';
         $request = $this->getIssuedDTERequest($body, $apikey);
 
         try {
@@ -165,7 +165,7 @@ class OpenFacturaApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DocumentIssuedResponse',
+                        '\Tsukiro\Client\Model\DocumentIssuedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -180,7 +180,7 @@ class OpenFacturaApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\DocumentIssuedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentIssuedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
@@ -201,7 +201,7 @@ class OpenFacturaApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\DocumentIssuedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentIssuedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
@@ -209,7 +209,7 @@ class OpenFacturaApi
      */
     public function getIssuedDTEAsyncWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Swagger\Client\Model\DocumentIssuedResponse';
+        $returnType = '\Tsukiro\Client\Model\DocumentIssuedResponse';
         $request = $this->getIssuedDTERequest($body, $apikey);
 
         return $this->client
@@ -252,7 +252,7 @@ class OpenFacturaApi
     /**
      * Create request for operation 'getIssuedDTE'
      *
-     * @param  \Swagger\Client\Model\DocumentIssuedFilter $body (optional)
+     * @param  \Tsukiro\Client\Model\DocumentIssuedFilter $body (optional)
      * @param  string $apikey openfactura apikey (optional)
      *
      * @throws \InvalidArgumentException
