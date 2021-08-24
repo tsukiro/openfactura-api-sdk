@@ -1,5 +1,5 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "tsukiro/openfactura-api-sdk",
     "description": "",
     "keywords": [
         "swagger",
@@ -7,7 +7,7 @@
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://github.com/tsukiro/openfactura-api-sdk",
     "license": "proprietary",
     "authors": [
         {
