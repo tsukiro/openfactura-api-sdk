@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -35,7 +35,7 @@ use \Tsukiro\Client\ObjectSerializer;
  * DTEJsonJson Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'detalle' => '\Tsukiro\Client\Model\DTEDetail',
-'encabezado' => '\Tsukiro\Client\Model\DTEJsonJsonEncabezado'    ];
+        'encabezado' => '\Tsukiro\Client\Model\DTEJsonJsonEncabezado',
+'detalle' => '\Tsukiro\Client\Model\DTEDetail',
+'referencia' => '\Tsukiro\Client\Model\DTEReferencia'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +66,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'detalle' => null,
-'encabezado' => null    ];
+        'encabezado' => null,
+'detalle' => null,
+'referencia' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +97,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'detalle' => 'Detalle',
-'encabezado' => 'Encabezado'    ];
+        'encabezado' => 'Encabezado',
+'detalle' => 'Detalle',
+'referencia' => 'Referencia'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +107,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'detalle' => 'setDetalle',
-'encabezado' => 'setEncabezado'    ];
+        'encabezado' => 'setEncabezado',
+'detalle' => 'setDetalle',
+'referencia' => 'setReferencia'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +117,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'detalle' => 'getDetalle',
-'encabezado' => 'getEncabezado'    ];
+        'encabezado' => 'getEncabezado',
+'detalle' => 'getDetalle',
+'referencia' => 'getReferencia'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +179,9 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['detalle'] = isset($data['detalle']) ? $data['detalle'] : null;
         $this->container['encabezado'] = isset($data['encabezado']) ? $data['encabezado'] : null;
+        $this->container['detalle'] = isset($data['detalle']) ? $data['detalle'] : null;
+        $this->container['referencia'] = isset($data['referencia']) ? $data['referencia'] : null;
     }
 
     /**
@@ -203,6 +209,30 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets encabezado
+     *
+     * @return \Tsukiro\Client\Model\DTEJsonJsonEncabezado
+     */
+    public function getEncabezado()
+    {
+        return $this->container['encabezado'];
+    }
+
+    /**
+     * Sets encabezado
+     *
+     * @param \Tsukiro\Client\Model\DTEJsonJsonEncabezado $encabezado encabezado
+     *
+     * @return $this
+     */
+    public function setEncabezado($encabezado)
+    {
+        $this->container['encabezado'] = $encabezado;
+
+        return $this;
+    }
+
+    /**
      * Gets detalle
      *
      * @return \Tsukiro\Client\Model\DTEDetail
@@ -227,25 +257,25 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets encabezado
+     * Gets referencia
      *
-     * @return \Tsukiro\Client\Model\DTEJsonJsonEncabezado
+     * @return \Tsukiro\Client\Model\DTEReferencia
      */
-    public function getEncabezado()
+    public function getReferencia()
     {
-        return $this->container['encabezado'];
+        return $this->container['referencia'];
     }
 
     /**
-     * Sets encabezado
+     * Sets referencia
      *
-     * @param \Tsukiro\Client\Model\DTEJsonJsonEncabezado $encabezado encabezado
+     * @param \Tsukiro\Client\Model\DTEReferencia $referencia referencia
      *
      * @return $this
      */
-    public function setEncabezado($encabezado)
+    public function setReferencia($referencia)
     {
-        $this->container['encabezado'] = $encabezado;
+        $this->container['referencia'] = $referencia;
 
         return $this;
     }

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -35,7 +35,7 @@ use \Tsukiro\Client\ObjectSerializer;
  * DTEJsonJsonEncabezado Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => '\Tsukiro\Client\Model\DTEIdDoc',
 'emisor' => '\Tsukiro\Client\Model\DTEEmisor',
 'receptor' => '\Tsukiro\Client\Model\DTEReceptor',
-'totales' => '\Tsukiro\Client\Model\DTETotales',
-'referencia' => '\Tsukiro\Client\Model\DTEReferencia'    ];
+'totales' => '\Tsukiro\Client\Model\DTETotales'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,8 +70,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => null,
 'emisor' => null,
 'receptor' => null,
-'totales' => null,
-'referencia' => null    ];
+'totales' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -104,8 +102,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'IDDoc',
 'emisor' => 'Emisor',
 'receptor' => 'Receptor',
-'totales' => 'Totales',
-'referencia' => 'Referencia'    ];
+'totales' => 'Totales'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,8 +113,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'setIdDoc',
 'emisor' => 'setEmisor',
 'receptor' => 'setReceptor',
-'totales' => 'setTotales',
-'referencia' => 'setReferencia'    ];
+'totales' => 'setTotales'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -128,8 +124,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'getIdDoc',
 'emisor' => 'getEmisor',
 'receptor' => 'getReceptor',
-'totales' => 'getTotales',
-'referencia' => 'getReferencia'    ];
+'totales' => 'getTotales'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -193,7 +188,6 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
         $this->container['emisor'] = isset($data['emisor']) ? $data['emisor'] : null;
         $this->container['receptor'] = isset($data['receptor']) ? $data['receptor'] : null;
         $this->container['totales'] = isset($data['totales']) ? $data['totales'] : null;
-        $this->container['referencia'] = isset($data['referencia']) ? $data['referencia'] : null;
     }
 
     /**
@@ -312,30 +306,6 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
     public function setTotales($totales)
     {
         $this->container['totales'] = $totales;
-
-        return $this;
-    }
-
-    /**
-     * Gets referencia
-     *
-     * @return \Tsukiro\Client\Model\DTEReferencia
-     */
-    public function getReferencia()
-    {
-        return $this->container['referencia'];
-    }
-
-    /**
-     * Sets referencia
-     *
-     * @param \Tsukiro\Client\Model\DTEReferencia $referencia referencia
-     *
-     * @return $this
-     */
-    public function setReferencia($referencia)
-    {
-        $this->container['referencia'] = $referencia;
 
         return $this;
     }
