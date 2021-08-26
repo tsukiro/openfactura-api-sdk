@@ -59,7 +59,7 @@ class DTEEmisor implements ModelInterface, ArrayAccess
         'rut_emisor' => 'string',
 'rzn_soc' => 'string',
 'giro_emis' => 'string',
-'acteco' => 'OneOfDTEEmisorActeco',
+'acteco' => '\Tsukiro\Client\Model\ActecoArray',
 'dir_origen' => 'string',
 'cmna_origen' => 'string',
 'telefono' => 'string',
@@ -313,7 +313,7 @@ class DTEEmisor implements ModelInterface, ArrayAccess
     /**
      * Gets acteco
      *
-     * @return OneOfDTEEmisorActeco
+     * @return \Tsukiro\Client\Model\ActecoArray
      */
     public function getActeco()
     {
@@ -323,7 +323,7 @@ class DTEEmisor implements ModelInterface, ArrayAccess
     /**
      * Sets acteco
      *
-     * @param OneOfDTEEmisorActeco $acteco acteco
+     * @param \Tsukiro\Client\Model\ActecoArray $acteco acteco
      *
      * @return $this
      */
