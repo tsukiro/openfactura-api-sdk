@@ -171,14 +171,14 @@ class DTEReferencia implements ModelInterface, ArrayAccess
     {
     }
 
-    /**
+     /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
