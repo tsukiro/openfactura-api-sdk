@@ -16,17 +16,7 @@ PHP 5.5 and later
 To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
 ```
-{
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    }
-  ],
-  "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
-  }
-}
+composer install tsukiro/openfactura-api-sdk
 ```
 
 Then run `composer install`
@@ -56,7 +46,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Tsukiro\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\OpenFacturaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -71,7 +61,7 @@ try {
     echo 'Exception when calling DefaultApi->v2DteDocumentPost: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Tsukiro\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\OpenFacturaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -86,7 +76,22 @@ try {
     echo 'Exception when calling DefaultApi->v2DteDocumentReceivedPost: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Tsukiro\Client\Api\DefaultApi(
+$apiInstance = new Tsukiro\Client\Api\OpenFacturaApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Tsukiro\Client\Model\DocumentIssuedFilter(); // \Tsukiro\Client\Model\DocumentIssuedFilter | 
+$apikey = "apikey_example"; // string | openfactura apikey
+
+try {
+    $result = $apiInstance->getIssuedDTE($body, $apikey);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->v2DteDocumentReceivedPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Tsukiro\Client\Api\OpenFacturaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
