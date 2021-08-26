@@ -1,6 +1,6 @@
 <?php
 /**
- * DTEJsonJsonEncabezado
+ * DTE
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Tsukiro\Client\ObjectSerializer;
 
 /**
- * DTEJsonJsonEncabezado Class Doc Comment
+ * DTE Class Doc Comment
  *
  * @category Class
  * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
+class DTE implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DTEJson_json_Encabezado';
+    protected static $swaggerModelName = 'DTE';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id_doc' => '\Tsukiro\Client\Model\DTEIdDoc',
-'emisor' => '\Tsukiro\Client\Model\DTEEmisor',
-'receptor' => '\Tsukiro\Client\Model\DTEReceptor',
-'totales' => '\Tsukiro\Client\Model\DTETotales'    ];
+        'json' => '\Tsukiro\Client\Model\DTEJson',
+'folio' => 'int',
+'pdf' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +66,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id_doc' => null,
-'emisor' => null,
-'receptor' => null,
-'totales' => null    ];
+        'json' => null,
+'folio' => null,
+'pdf' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +97,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id_doc' => 'IDDoc',
-'emisor' => 'Emisor',
-'receptor' => 'Receptor',
-'totales' => 'Totales'    ];
+        'json' => 'json',
+'folio' => 'folio',
+'pdf' => 'pdf'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +107,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id_doc' => 'setIdDoc',
-'emisor' => 'setEmisor',
-'receptor' => 'setReceptor',
-'totales' => 'setTotales'    ];
+        'json' => 'setJson',
+'folio' => 'setFolio',
+'pdf' => 'setPdf'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +117,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id_doc' => 'getIdDoc',
-'emisor' => 'getEmisor',
-'receptor' => 'getReceptor',
-'totales' => 'getTotales'    ];
+        'json' => 'getJson',
+'folio' => 'getFolio',
+'pdf' => 'getPdf'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +179,9 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id_doc'] = isset($data['id_doc']) ? $data['id_doc'] : null;
-        $this->container['emisor'] = isset($data['emisor']) ? $data['emisor'] : null;
-        $this->container['receptor'] = isset($data['receptor']) ? $data['receptor'] : null;
-        $this->container['totales'] = isset($data['totales']) ? $data['totales'] : null;
+        $this->container['json'] = isset($data['json']) ? $data['json'] : null;
+        $this->container['folio'] = isset($data['folio']) ? $data['folio'] : null;
+        $this->container['pdf'] = isset($data['pdf']) ? $data['pdf'] : null;
     }
 
     /**
@@ -215,97 +209,73 @@ class DTEJsonJsonEncabezado implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id_doc
+     * Gets json
      *
-     * @return \Tsukiro\Client\Model\DTEIdDoc
+     * @return \Tsukiro\Client\Model\DTEJson
      */
-    public function getIdDoc()
+    public function getJson()
     {
-        return $this->container['id_doc'];
+        return $this->container['json'];
     }
 
     /**
-     * Sets id_doc
+     * Sets json
      *
-     * @param \Tsukiro\Client\Model\DTEIdDoc $id_doc id_doc
+     * @param \Tsukiro\Client\Model\DTEJson $json json
      *
      * @return $this
      */
-    public function setIdDoc($id_doc)
+    public function setJson($json)
     {
-        $this->container['id_doc'] = $id_doc;
+        $this->container['json'] = $json;
 
         return $this;
     }
 
     /**
-     * Gets emisor
+     * Gets folio
      *
-     * @return \Tsukiro\Client\Model\DTEEmisor
+     * @return int
      */
-    public function getEmisor()
+    public function getFolio()
     {
-        return $this->container['emisor'];
+        return $this->container['folio'];
     }
 
     /**
-     * Sets emisor
+     * Sets folio
      *
-     * @param \Tsukiro\Client\Model\DTEEmisor $emisor emisor
+     * @param int $folio folio
      *
      * @return $this
      */
-    public function setEmisor($emisor)
+    public function setFolio($folio)
     {
-        $this->container['emisor'] = $emisor;
+        $this->container['folio'] = $folio;
 
         return $this;
     }
 
     /**
-     * Gets receptor
+     * Gets pdf
      *
-     * @return \Tsukiro\Client\Model\DTEReceptor
+     * @return string
      */
-    public function getReceptor()
+    public function getPdf()
     {
-        return $this->container['receptor'];
+        return $this->container['pdf'];
     }
 
     /**
-     * Sets receptor
+     * Sets pdf
      *
-     * @param \Tsukiro\Client\Model\DTEReceptor $receptor receptor
+     * @param string $pdf pdf
      *
      * @return $this
      */
-    public function setReceptor($receptor)
+    public function setPdf($pdf)
     {
-        $this->container['receptor'] = $receptor;
-
-        return $this;
-    }
-
-    /**
-     * Gets totales
-     *
-     * @return \Tsukiro\Client\Model\DTETotales
-     */
-    public function getTotales()
-    {
-        return $this->container['totales'];
-    }
-
-    /**
-     * Sets totales
-     *
-     * @param \Tsukiro\Client\Model\DTETotales $totales totales
-     *
-     * @return $this
-     */
-    public function setTotales($totales)
-    {
-        $this->container['totales'] = $totales;
+        $this->container['pdf'] = $pdf;
 
         return $this;
     }

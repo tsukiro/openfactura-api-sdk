@@ -857,7 +857,7 @@ class OpenFacturaApi
     }
 
     /**
-     * Operation getDTEDocument
+     * Operation getDteDocument
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -869,16 +869,16 @@ class OpenFacturaApi
      *
      * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Tsukiro\Client\Model\InlineResponse200
+     * @return \Tsukiro\Client\Model\DTE
      */
-    public function getDTEDocument($rut, $type, $document_number, $value, $apikey = null)
+    public function getDteDocument($rut, $type, $document_number, $value, $apikey = null)
     {
-        list($response) = $this->getDTEDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey);
+        list($response) = $this->getDteDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey);
         return $response;
     }
 
     /**
-     * Operation getDTEDocumentWithHttpInfo
+     * Operation getDteDocumentWithHttpInfo
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -890,12 +890,12 @@ class OpenFacturaApi
      *
      * @throws \Tsukiro\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Tsukiro\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tsukiro\Client\Model\DTE, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDTEDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
+    public function getDteDocumentWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
     {
-        $returnType = '\Tsukiro\Client\Model\InlineResponse200';
-        $request = $this->getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DTE';
+        $request = $this->getDteDocumentRequest($rut, $type, $document_number, $value, $apikey);
 
         try {
             $options = $this->createHttpClientOption();
@@ -946,7 +946,7 @@ class OpenFacturaApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Tsukiro\Client\Model\InlineResponse200',
+                        '\Tsukiro\Client\Model\DTE',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -957,7 +957,7 @@ class OpenFacturaApi
     }
 
     /**
-     * Operation getDTEDocumentAsync
+     * Operation getDteDocumentAsync
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -970,9 +970,9 @@ class OpenFacturaApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDTEDocumentAsync($rut, $type, $document_number, $value, $apikey = null)
+    public function getDteDocumentAsync($rut, $type, $document_number, $value, $apikey = null)
     {
-        return $this->getDTEDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey)
+        return $this->getDteDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -981,7 +981,7 @@ class OpenFacturaApi
     }
 
     /**
-     * Operation getDTEDocumentAsyncWithHttpInfo
+     * Operation getDteDocumentAsyncWithHttpInfo
      *
      * Entrega la información de un documento emitido o recibido en Openfactura.
      *
@@ -994,10 +994,10 @@ class OpenFacturaApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDTEDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
+    public function getDteDocumentAsyncWithHttpInfo($rut, $type, $document_number, $value, $apikey = null)
     {
-        $returnType = '\Tsukiro\Client\Model\InlineResponse200';
-        $request = $this->getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey);
+        $returnType = '\Tsukiro\Client\Model\DTE';
+        $request = $this->getDteDocumentRequest($rut, $type, $document_number, $value, $apikey);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1037,7 +1037,7 @@ class OpenFacturaApi
     }
 
     /**
-     * Create request for operation 'getDTEDocument'
+     * Create request for operation 'getDteDocument'
      *
      * @param  string $rut (required)
      * @param  string $type (required)
@@ -1048,30 +1048,30 @@ class OpenFacturaApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getDTEDocumentRequest($rut, $type, $document_number, $value, $apikey = null)
+    protected function getDteDocumentRequest($rut, $type, $document_number, $value, $apikey = null)
     {
         // verify the required parameter 'rut' is set
         if ($rut === null || (is_array($rut) && count($rut) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $rut when calling getDTEDocument'
+                'Missing the required parameter $rut when calling getDteDocument'
             );
         }
         // verify the required parameter 'type' is set
         if ($type === null || (is_array($type) && count($type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling getDTEDocument'
+                'Missing the required parameter $type when calling getDteDocument'
             );
         }
         // verify the required parameter 'document_number' is set
         if ($document_number === null || (is_array($document_number) && count($document_number) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $document_number when calling getDTEDocument'
+                'Missing the required parameter $document_number when calling getDteDocument'
             );
         }
         // verify the required parameter 'value' is set
         if ($value === null || (is_array($value) && count($value) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $value when calling getDTEDocument'
+                'Missing the required parameter $value when calling getDteDocument'
             );
         }
 

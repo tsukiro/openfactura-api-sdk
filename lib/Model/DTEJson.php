@@ -48,7 +48,7 @@ class DTEJson implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DTEJson';
+    protected static $swaggerModelName = 'DTE_json';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,9 @@ class DTEJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'json' => '\Tsukiro\Client\Model\DTEJsonJson',
-'folio' => 'int'    ];
+        'encabezado' => '\Tsukiro\Client\Model\DTEJsonEncabezado',
+'detalle' => '\Tsukiro\Client\Model\DTEDetail',
+'referencia' => '\Tsukiro\Client\Model\DTEReferencia'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +66,9 @@ class DTEJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'json' => null,
-'folio' => null    ];
+        'encabezado' => null,
+'detalle' => null,
+'referencia' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +97,9 @@ class DTEJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'json' => 'json',
-'folio' => 'folio'    ];
+        'encabezado' => 'Encabezado',
+'detalle' => 'Detalle',
+'referencia' => 'Referencia'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +107,9 @@ class DTEJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'json' => 'setJson',
-'folio' => 'setFolio'    ];
+        'encabezado' => 'setEncabezado',
+'detalle' => 'setDetalle',
+'referencia' => 'setReferencia'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +117,9 @@ class DTEJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'json' => 'getJson',
-'folio' => 'getFolio'    ];
+        'encabezado' => 'getEncabezado',
+'detalle' => 'getDetalle',
+'referencia' => 'getReferencia'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +179,9 @@ class DTEJson implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['json'] = isset($data['json']) ? $data['json'] : null;
-        $this->container['folio'] = isset($data['folio']) ? $data['folio'] : null;
+        $this->container['encabezado'] = isset($data['encabezado']) ? $data['encabezado'] : null;
+        $this->container['detalle'] = isset($data['detalle']) ? $data['detalle'] : null;
+        $this->container['referencia'] = isset($data['referencia']) ? $data['referencia'] : null;
     }
 
     /**
@@ -203,49 +209,73 @@ class DTEJson implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets json
+     * Gets encabezado
      *
-     * @return \Tsukiro\Client\Model\DTEJsonJson
+     * @return \Tsukiro\Client\Model\DTEJsonEncabezado
      */
-    public function getJson()
+    public function getEncabezado()
     {
-        return $this->container['json'];
+        return $this->container['encabezado'];
     }
 
     /**
-     * Sets json
+     * Sets encabezado
      *
-     * @param \Tsukiro\Client\Model\DTEJsonJson $json json
+     * @param \Tsukiro\Client\Model\DTEJsonEncabezado $encabezado encabezado
      *
      * @return $this
      */
-    public function setJson($json)
+    public function setEncabezado($encabezado)
     {
-        $this->container['json'] = $json;
+        $this->container['encabezado'] = $encabezado;
 
         return $this;
     }
 
     /**
-     * Gets folio
+     * Gets detalle
      *
-     * @return int
+     * @return \Tsukiro\Client\Model\DTEDetail
      */
-    public function getFolio()
+    public function getDetalle()
     {
-        return $this->container['folio'];
+        return $this->container['detalle'];
     }
 
     /**
-     * Sets folio
+     * Sets detalle
      *
-     * @param int $folio folio
+     * @param \Tsukiro\Client\Model\DTEDetail $detalle detalle
      *
      * @return $this
      */
-    public function setFolio($folio)
+    public function setDetalle($detalle)
     {
-        $this->container['folio'] = $folio;
+        $this->container['detalle'] = $detalle;
+
+        return $this;
+    }
+
+    /**
+     * Gets referencia
+     *
+     * @return \Tsukiro\Client\Model\DTEReferencia
+     */
+    public function getReferencia()
+    {
+        return $this->container['referencia'];
+    }
+
+    /**
+     * Sets referencia
+     *
+     * @param \Tsukiro\Client\Model\DTEReferencia $referencia referencia
+     *
+     * @return $this
+     */
+    public function setReferencia($referencia)
+    {
+        $this->container['referencia'] = $referencia;
 
         return $this;
     }

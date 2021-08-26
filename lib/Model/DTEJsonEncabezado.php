@@ -1,6 +1,6 @@
 <?php
 /**
- * DTEJsonJson
+ * DTEJsonEncabezado
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Tsukiro\Client\ObjectSerializer;
 
 /**
- * DTEJsonJson Class Doc Comment
+ * DTEJsonEncabezado Class Doc Comment
  *
  * @category Class
  * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DTEJsonJson implements ModelInterface, ArrayAccess
+class DTEJsonEncabezado implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DTEJson_json';
+    protected static $swaggerModelName = 'DTE_json_Encabezado';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'encabezado' => '\Tsukiro\Client\Model\DTEJsonJsonEncabezado',
-'detalle' => '\Tsukiro\Client\Model\DTEDetail',
-'referencia' => '\Tsukiro\Client\Model\DTEReferencia'    ];
+        'id_doc' => '\Tsukiro\Client\Model\DTEIdDoc',
+'emisor' => '\Tsukiro\Client\Model\DTEEmisor',
+'receptor' => '\Tsukiro\Client\Model\DTEReceptor',
+'totales' => '\Tsukiro\Client\Model\DTETotales'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +67,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'encabezado' => null,
-'detalle' => null,
-'referencia' => null    ];
+        'id_doc' => null,
+'emisor' => null,
+'receptor' => null,
+'totales' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +99,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'encabezado' => 'Encabezado',
-'detalle' => 'Detalle',
-'referencia' => 'Referencia'    ];
+        'id_doc' => 'IDDoc',
+'emisor' => 'Emisor',
+'receptor' => 'Receptor',
+'totales' => 'Totales'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +110,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'encabezado' => 'setEncabezado',
-'detalle' => 'setDetalle',
-'referencia' => 'setReferencia'    ];
+        'id_doc' => 'setIdDoc',
+'emisor' => 'setEmisor',
+'receptor' => 'setReceptor',
+'totales' => 'setTotales'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +121,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'encabezado' => 'getEncabezado',
-'detalle' => 'getDetalle',
-'referencia' => 'getReferencia'    ];
+        'id_doc' => 'getIdDoc',
+'emisor' => 'getEmisor',
+'receptor' => 'getReceptor',
+'totales' => 'getTotales'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +184,10 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['encabezado'] = isset($data['encabezado']) ? $data['encabezado'] : null;
-        $this->container['detalle'] = isset($data['detalle']) ? $data['detalle'] : null;
-        $this->container['referencia'] = isset($data['referencia']) ? $data['referencia'] : null;
+        $this->container['id_doc'] = isset($data['id_doc']) ? $data['id_doc'] : null;
+        $this->container['emisor'] = isset($data['emisor']) ? $data['emisor'] : null;
+        $this->container['receptor'] = isset($data['receptor']) ? $data['receptor'] : null;
+        $this->container['totales'] = isset($data['totales']) ? $data['totales'] : null;
     }
 
     /**
@@ -209,73 +215,97 @@ class DTEJsonJson implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets encabezado
+     * Gets id_doc
      *
-     * @return \Tsukiro\Client\Model\DTEJsonJsonEncabezado
+     * @return \Tsukiro\Client\Model\DTEIdDoc
      */
-    public function getEncabezado()
+    public function getIdDoc()
     {
-        return $this->container['encabezado'];
+        return $this->container['id_doc'];
     }
 
     /**
-     * Sets encabezado
+     * Sets id_doc
      *
-     * @param \Tsukiro\Client\Model\DTEJsonJsonEncabezado $encabezado encabezado
+     * @param \Tsukiro\Client\Model\DTEIdDoc $id_doc id_doc
      *
      * @return $this
      */
-    public function setEncabezado($encabezado)
+    public function setIdDoc($id_doc)
     {
-        $this->container['encabezado'] = $encabezado;
+        $this->container['id_doc'] = $id_doc;
 
         return $this;
     }
 
     /**
-     * Gets detalle
+     * Gets emisor
      *
-     * @return \Tsukiro\Client\Model\DTEDetail
+     * @return \Tsukiro\Client\Model\DTEEmisor
      */
-    public function getDetalle()
+    public function getEmisor()
     {
-        return $this->container['detalle'];
+        return $this->container['emisor'];
     }
 
     /**
-     * Sets detalle
+     * Sets emisor
      *
-     * @param \Tsukiro\Client\Model\DTEDetail $detalle detalle
+     * @param \Tsukiro\Client\Model\DTEEmisor $emisor emisor
      *
      * @return $this
      */
-    public function setDetalle($detalle)
+    public function setEmisor($emisor)
     {
-        $this->container['detalle'] = $detalle;
+        $this->container['emisor'] = $emisor;
 
         return $this;
     }
 
     /**
-     * Gets referencia
+     * Gets receptor
      *
-     * @return \Tsukiro\Client\Model\DTEReferencia
+     * @return \Tsukiro\Client\Model\DTEReceptor
      */
-    public function getReferencia()
+    public function getReceptor()
     {
-        return $this->container['referencia'];
+        return $this->container['receptor'];
     }
 
     /**
-     * Sets referencia
+     * Sets receptor
      *
-     * @param \Tsukiro\Client\Model\DTEReferencia $referencia referencia
+     * @param \Tsukiro\Client\Model\DTEReceptor $receptor receptor
      *
      * @return $this
      */
-    public function setReferencia($referencia)
+    public function setReceptor($receptor)
     {
-        $this->container['referencia'] = $referencia;
+        $this->container['receptor'] = $receptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets totales
+     *
+     * @return \Tsukiro\Client\Model\DTETotales
+     */
+    public function getTotales()
+    {
+        return $this->container['totales'];
+    }
+
+    /**
+     * Sets totales
+     *
+     * @param \Tsukiro\Client\Model\DTETotales $totales totales
+     *
+     * @return $this
+     */
+    public function setTotales($totales)
+    {
+        $this->container['totales'] = $totales;
 
         return $this;
     }
