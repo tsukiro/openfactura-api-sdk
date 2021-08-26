@@ -58,7 +58,8 @@ class DTEJson implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'encabezado' => '\Tsukiro\Client\Model\DTEJsonEncabezado',
 'detalle' => '\Tsukiro\Client\Model\DTEDetail',
-'referencia' => '\Tsukiro\Client\Model\DTEReferencia'    ];
+'referencia' => '\Tsukiro\Client\Model\DTEReferencia',
+'dsc_rcg_global' => '\Tsukiro\Client\Model\DTEDscRcgGlobal'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +69,8 @@ class DTEJson implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'encabezado' => null,
 'detalle' => null,
-'referencia' => null    ];
+'referencia' => null,
+'dsc_rcg_global' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,7 +101,8 @@ class DTEJson implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'encabezado' => 'Encabezado',
 'detalle' => 'Detalle',
-'referencia' => 'Referencia'    ];
+'referencia' => 'Referencia',
+'dsc_rcg_global' => 'DscRcgGlobal'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -109,7 +112,8 @@ class DTEJson implements ModelInterface, ArrayAccess
     protected static $setters = [
         'encabezado' => 'setEncabezado',
 'detalle' => 'setDetalle',
-'referencia' => 'setReferencia'    ];
+'referencia' => 'setReferencia',
+'dsc_rcg_global' => 'setDscRcgGlobal'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -119,7 +123,8 @@ class DTEJson implements ModelInterface, ArrayAccess
     protected static $getters = [
         'encabezado' => 'getEncabezado',
 'detalle' => 'getDetalle',
-'referencia' => 'getReferencia'    ];
+'referencia' => 'getReferencia',
+'dsc_rcg_global' => 'getDscRcgGlobal'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -182,6 +187,7 @@ class DTEJson implements ModelInterface, ArrayAccess
         $this->container['encabezado'] = isset($data['encabezado']) ? $data['encabezado'] : null;
         $this->container['detalle'] = isset($data['detalle']) ? $data['detalle'] : null;
         $this->container['referencia'] = isset($data['referencia']) ? $data['referencia'] : null;
+        $this->container['dsc_rcg_global'] = isset($data['dsc_rcg_global']) ? $data['dsc_rcg_global'] : null;
     }
 
     /**
@@ -276,6 +282,30 @@ class DTEJson implements ModelInterface, ArrayAccess
     public function setReferencia($referencia)
     {
         $this->container['referencia'] = $referencia;
+
+        return $this;
+    }
+
+    /**
+     * Gets dsc_rcg_global
+     *
+     * @return \Tsukiro\Client\Model\DTEDscRcgGlobal
+     */
+    public function getDscRcgGlobal()
+    {
+        return $this->container['dsc_rcg_global'];
+    }
+
+    /**
+     * Sets dsc_rcg_global
+     *
+     * @param \Tsukiro\Client\Model\DTEDscRcgGlobal $dsc_rcg_global dsc_rcg_global
+     *
+     * @return $this
+     */
+    public function setDscRcgGlobal($dsc_rcg_global)
+    {
+        $this->container['dsc_rcg_global'] = $dsc_rcg_global;
 
         return $this;
     }

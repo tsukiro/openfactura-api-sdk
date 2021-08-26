@@ -58,6 +58,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'nro_lin_det' => 'int',
 'nmb_item' => 'string',
+'dsc_item' => 'string',
 'qty_item' => 'int',
 'prc_item' => 'int',
 'monto_item' => 'int'    ];
@@ -70,6 +71,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'nro_lin_det' => null,
 'nmb_item' => null,
+'dsc_item' => null,
 'qty_item' => null,
 'prc_item' => null,
 'monto_item' => null    ];
@@ -103,6 +105,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'nro_lin_det' => 'NroLinDet',
 'nmb_item' => 'NmbItem',
+'dsc_item' => 'DscItem',
 'qty_item' => 'QtyItem',
 'prc_item' => 'PrcItem',
 'monto_item' => 'MontoItem'    ];
@@ -115,6 +118,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     protected static $setters = [
         'nro_lin_det' => 'setNroLinDet',
 'nmb_item' => 'setNmbItem',
+'dsc_item' => 'setDscItem',
 'qty_item' => 'setQtyItem',
 'prc_item' => 'setPrcItem',
 'monto_item' => 'setMontoItem'    ];
@@ -127,6 +131,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     protected static $getters = [
         'nro_lin_det' => 'getNroLinDet',
 'nmb_item' => 'getNmbItem',
+'dsc_item' => 'getDscItem',
 'qty_item' => 'getQtyItem',
 'prc_item' => 'getPrcItem',
 'monto_item' => 'getMontoItem'    ];
@@ -191,6 +196,7 @@ class DTEDetail implements ModelInterface, ArrayAccess
     {
         $this->container['nro_lin_det'] = isset($data['nro_lin_det']) ? $data['nro_lin_det'] : null;
         $this->container['nmb_item'] = isset($data['nmb_item']) ? $data['nmb_item'] : null;
+        $this->container['dsc_item'] = isset($data['dsc_item']) ? $data['dsc_item'] : null;
         $this->container['qty_item'] = isset($data['qty_item']) ? $data['qty_item'] : null;
         $this->container['prc_item'] = isset($data['prc_item']) ? $data['prc_item'] : null;
         $this->container['monto_item'] = isset($data['monto_item']) ? $data['monto_item'] : null;
@@ -264,6 +270,30 @@ class DTEDetail implements ModelInterface, ArrayAccess
     public function setNmbItem($nmb_item)
     {
         $this->container['nmb_item'] = $nmb_item;
+
+        return $this;
+    }
+
+    /**
+     * Gets dsc_item
+     *
+     * @return string
+     */
+    public function getDscItem()
+    {
+        return $this->container['dsc_item'];
+    }
+
+    /**
+     * Sets dsc_item
+     *
+     * @param string $dsc_item dsc_item
+     *
+     * @return $this
+     */
+    public function setDscItem($dsc_item)
+    {
+        $this->container['dsc_item'] = $dsc_item;
 
         return $this;
     }

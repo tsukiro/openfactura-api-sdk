@@ -59,6 +59,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => '\Tsukiro\Client\Model\DTEIdDoc',
 'emisor' => '\Tsukiro\Client\Model\DTEEmisor',
 'receptor' => '\Tsukiro\Client\Model\DTEReceptor',
+'transporte' => '\Tsukiro\Client\Model\DTETransporte',
 'totales' => '\Tsukiro\Client\Model\DTETotales'    ];
 
     /**
@@ -70,6 +71,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => null,
 'emisor' => null,
 'receptor' => null,
+'transporte' => null,
 'totales' => null    ];
 
     /**
@@ -102,6 +104,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'IDDoc',
 'emisor' => 'Emisor',
 'receptor' => 'Receptor',
+'transporte' => 'Transporte',
 'totales' => 'Totales'    ];
 
     /**
@@ -113,6 +116,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'setIdDoc',
 'emisor' => 'setEmisor',
 'receptor' => 'setReceptor',
+'transporte' => 'setTransporte',
 'totales' => 'setTotales'    ];
 
     /**
@@ -124,6 +128,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         'id_doc' => 'getIdDoc',
 'emisor' => 'getEmisor',
 'receptor' => 'getReceptor',
+'transporte' => 'getTransporte',
 'totales' => 'getTotales'    ];
 
     /**
@@ -187,6 +192,7 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
         $this->container['id_doc'] = isset($data['id_doc']) ? $data['id_doc'] : null;
         $this->container['emisor'] = isset($data['emisor']) ? $data['emisor'] : null;
         $this->container['receptor'] = isset($data['receptor']) ? $data['receptor'] : null;
+        $this->container['transporte'] = isset($data['transporte']) ? $data['transporte'] : null;
         $this->container['totales'] = isset($data['totales']) ? $data['totales'] : null;
     }
 
@@ -282,6 +288,30 @@ class DTEJsonEncabezado implements ModelInterface, ArrayAccess
     public function setReceptor($receptor)
     {
         $this->container['receptor'] = $receptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets transporte
+     *
+     * @return \Tsukiro\Client\Model\DTETransporte
+     */
+    public function getTransporte()
+    {
+        return $this->container['transporte'];
+    }
+
+    /**
+     * Sets transporte
+     *
+     * @param \Tsukiro\Client\Model\DTETransporte $transporte transporte
+     *
+     * @return $this
+     */
+    public function setTransporte($transporte)
+    {
+        $this->container['transporte'] = $transporte;
 
         return $this;
     }

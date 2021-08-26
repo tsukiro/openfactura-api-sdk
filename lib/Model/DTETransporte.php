@@ -1,6 +1,6 @@
 <?php
 /**
- * ActecoString
+ * DTETransporte
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Tsukiro\Client\ObjectSerializer;
 
 /**
- * ActecoString Class Doc Comment
+ * DTETransporte Class Doc Comment
  *
  * @category Class
  * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActecoString implements ModelInterface, ArrayAccess
+class DTETransporte implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActecoString implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ActecoString';
+    protected static $swaggerModelName = 'DTETransporte';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,9 @@ class ActecoString implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-            ];
+        'dir_dest' => 'string',
+'cmna_dest' => 'string',
+'ciudad_dest' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +66,9 @@ class ActecoString implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-            ];
+        'dir_dest' => null,
+'cmna_dest' => null,
+'ciudad_dest' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +97,9 @@ class ActecoString implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-            ];
+        'dir_dest' => 'DirDest',
+'cmna_dest' => 'CmnaDest',
+'ciudad_dest' => 'CiudadDest'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +107,9 @@ class ActecoString implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-            ];
+        'dir_dest' => 'setDirDest',
+'cmna_dest' => 'setCmnaDest',
+'ciudad_dest' => 'setCiudadDest'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +117,9 @@ class ActecoString implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-            ];
+        'dir_dest' => 'getDirDest',
+'cmna_dest' => 'getCmnaDest',
+'ciudad_dest' => 'getCiudadDest'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,6 +179,9 @@ class ActecoString implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['dir_dest'] = isset($data['dir_dest']) ? $data['dir_dest'] : null;
+        $this->container['cmna_dest'] = isset($data['cmna_dest']) ? $data['cmna_dest'] : null;
+        $this->container['ciudad_dest'] = isset($data['ciudad_dest']) ? $data['ciudad_dest'] : null;
     }
 
     /**
@@ -194,6 +207,78 @@ class ActecoString implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets dir_dest
+     *
+     * @return string
+     */
+    public function getDirDest()
+    {
+        return $this->container['dir_dest'];
+    }
+
+    /**
+     * Sets dir_dest
+     *
+     * @param string $dir_dest dir_dest
+     *
+     * @return $this
+     */
+    public function setDirDest($dir_dest)
+    {
+        $this->container['dir_dest'] = $dir_dest;
+
+        return $this;
+    }
+
+    /**
+     * Gets cmna_dest
+     *
+     * @return string
+     */
+    public function getCmnaDest()
+    {
+        return $this->container['cmna_dest'];
+    }
+
+    /**
+     * Sets cmna_dest
+     *
+     * @param string $cmna_dest cmna_dest
+     *
+     * @return $this
+     */
+    public function setCmnaDest($cmna_dest)
+    {
+        $this->container['cmna_dest'] = $cmna_dest;
+
+        return $this;
+    }
+
+    /**
+     * Gets ciudad_dest
+     *
+     * @return string
+     */
+    public function getCiudadDest()
+    {
+        return $this->container['ciudad_dest'];
+    }
+
+    /**
+     * Sets ciudad_dest
+     *
+     * @param string $ciudad_dest ciudad_dest
+     *
+     * @return $this
+     */
+    public function setCiudadDest($ciudad_dest)
+    {
+        $this->container['ciudad_dest'] = $ciudad_dest;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

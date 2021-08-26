@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Tsukiro\Client;
 
 use Tsukiro\Client\Configuration;
 use Tsukiro\Client\ApiException;
@@ -35,7 +35,7 @@ use Tsukiro\Client\ObjectSerializer;
  * DefaultApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

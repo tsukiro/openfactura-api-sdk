@@ -103,7 +103,7 @@ class DTEReferenciaItem implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'fch_ref' => 'FchRef',
 'folio_ref' => 'FolioRef',
-'razon_re' => 'RazonRe&quot;',
+'razon_re' => 'RazonRe',
 'nro_lin_ref' => 'NroLinRef',
 'tpo_doc_ref' => 'TpoDocRef'    ];
 

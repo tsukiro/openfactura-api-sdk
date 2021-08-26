@@ -1,6 +1,6 @@
 <?php
 /**
- * NotEqualFilter
+ * DTEDscRcgGlobal
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Tsukiro\Client\ObjectSerializer;
 
 /**
- * NotEqualFilter Class Doc Comment
+ * DTEDscRcgGlobal Class Doc Comment
  *
  * @category Class
  * @package  Tsukiro\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class NotEqualFilter implements ModelInterface, ArrayAccess
+class DTEDscRcgGlobal implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'NotEqualFilter';
+    protected static $swaggerModelName = 'DTEDscRcgGlobal';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ne' => 'string'    ];
+        'nro_lin_dr' => 'int',
+'tpo_mov' => 'string',
+'glosa_dr' => 'string',
+'tpo_valor' => 'string',
+'valor_dr' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +68,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ne' => null    ];
+        'nro_lin_dr' => null,
+'tpo_mov' => null,
+'glosa_dr' => null,
+'tpo_valor' => null,
+'valor_dr' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +101,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ne' => 'ne'    ];
+        'nro_lin_dr' => 'NroLinDR',
+'tpo_mov' => 'TpoMov',
+'glosa_dr' => 'GlosaDR',
+'tpo_valor' => 'TpoValor',
+'valor_dr' => 'ValorDR'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +113,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ne' => 'setNe'    ];
+        'nro_lin_dr' => 'setNroLinDr',
+'tpo_mov' => 'setTpoMov',
+'glosa_dr' => 'setGlosaDr',
+'tpo_valor' => 'setTpoValor',
+'valor_dr' => 'setValorDr'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +125,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ne' => 'getNe'    ];
+        'nro_lin_dr' => 'getNroLinDr',
+'tpo_mov' => 'getTpoMov',
+'glosa_dr' => 'getGlosaDr',
+'tpo_valor' => 'getTpoValor',
+'valor_dr' => 'getValorDr'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +189,11 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ne'] = isset($data['ne']) ? $data['ne'] : null;
+        $this->container['nro_lin_dr'] = isset($data['nro_lin_dr']) ? $data['nro_lin_dr'] : null;
+        $this->container['tpo_mov'] = isset($data['tpo_mov']) ? $data['tpo_mov'] : null;
+        $this->container['glosa_dr'] = isset($data['glosa_dr']) ? $data['glosa_dr'] : null;
+        $this->container['tpo_valor'] = isset($data['tpo_valor']) ? $data['tpo_valor'] : null;
+        $this->container['valor_dr'] = isset($data['valor_dr']) ? $data['valor_dr'] : null;
     }
 
     /**
@@ -197,25 +221,121 @@ class NotEqualFilter implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ne
+     * Gets nro_lin_dr
      *
-     * @return string
+     * @return int
      */
-    public function getNe()
+    public function getNroLinDr()
     {
-        return $this->container['ne'];
+        return $this->container['nro_lin_dr'];
     }
 
     /**
-     * Sets ne
+     * Sets nro_lin_dr
      *
-     * @param string $ne ne
+     * @param int $nro_lin_dr nro_lin_dr
      *
      * @return $this
      */
-    public function setNe($ne)
+    public function setNroLinDr($nro_lin_dr)
     {
-        $this->container['ne'] = $ne;
+        $this->container['nro_lin_dr'] = $nro_lin_dr;
+
+        return $this;
+    }
+
+    /**
+     * Gets tpo_mov
+     *
+     * @return string
+     */
+    public function getTpoMov()
+    {
+        return $this->container['tpo_mov'];
+    }
+
+    /**
+     * Sets tpo_mov
+     *
+     * @param string $tpo_mov tpo_mov
+     *
+     * @return $this
+     */
+    public function setTpoMov($tpo_mov)
+    {
+        $this->container['tpo_mov'] = $tpo_mov;
+
+        return $this;
+    }
+
+    /**
+     * Gets glosa_dr
+     *
+     * @return string
+     */
+    public function getGlosaDr()
+    {
+        return $this->container['glosa_dr'];
+    }
+
+    /**
+     * Sets glosa_dr
+     *
+     * @param string $glosa_dr glosa_dr
+     *
+     * @return $this
+     */
+    public function setGlosaDr($glosa_dr)
+    {
+        $this->container['glosa_dr'] = $glosa_dr;
+
+        return $this;
+    }
+
+    /**
+     * Gets tpo_valor
+     *
+     * @return string
+     */
+    public function getTpoValor()
+    {
+        return $this->container['tpo_valor'];
+    }
+
+    /**
+     * Sets tpo_valor
+     *
+     * @param string $tpo_valor tpo_valor
+     *
+     * @return $this
+     */
+    public function setTpoValor($tpo_valor)
+    {
+        $this->container['tpo_valor'] = $tpo_valor;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_dr
+     *
+     * @return int
+     */
+    public function getValorDr()
+    {
+        return $this->container['valor_dr'];
+    }
+
+    /**
+     * Sets valor_dr
+     *
+     * @param int $valor_dr valor_dr
+     *
+     * @return $this
+     */
+    public function setValorDr($valor_dr)
+    {
+        $this->container['valor_dr'] = $valor_dr;
 
         return $this;
     }
