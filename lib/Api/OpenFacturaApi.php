@@ -113,7 +113,7 @@ class OpenFacturaApi
      */
     public function getIssuedDTEWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Tsukiro\Client\Model\DocumentIssuedResponse';
+        $returnType = null;
         $request = $this->getIssuedDTERequest($body, $apikey);
 
         try {
@@ -155,7 +155,7 @@ class OpenFacturaApi
             }
 
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                $content,
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
@@ -227,7 +227,7 @@ class OpenFacturaApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $content,
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -372,7 +372,7 @@ class OpenFacturaApi
      */
     public function DocumentEmitWithHttpInfo($body = null, $apikey = null)
     {
-        $returnType = '\Tsukiro\Client\Model\DTEResponse';
+        $returnType = null;
         $request = $this->DocumentEmitRequest($body, $apikey);
 
         try {
@@ -414,7 +414,7 @@ class OpenFacturaApi
             }
 
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                $content,
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
@@ -486,7 +486,7 @@ class OpenFacturaApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $content,
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -670,7 +670,7 @@ class OpenFacturaApi
             }
 
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                $content,
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
@@ -742,7 +742,7 @@ class OpenFacturaApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $content,
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -936,7 +936,7 @@ class OpenFacturaApi
             }
 
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                $content,
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
@@ -1014,7 +1014,7 @@ class OpenFacturaApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $content,
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
